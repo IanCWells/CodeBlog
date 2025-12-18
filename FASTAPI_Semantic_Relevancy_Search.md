@@ -28,7 +28,7 @@ A single REST API can be reused across multiple clients (web apps, mobile apps, 
 
 ---
 
-## Use APIs
+## Useful APIs
 
 Many companies and individuals build APIs specifically so others can create tools and applications on top of them.
 
