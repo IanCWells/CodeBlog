@@ -1,5 +1,4 @@
-## Inspiration - 
-**[REST API Crash Course Caleb Curry?](https://www.youtube.com/watch?v=qbLc5a9jdXo)**
+## Inspired From - **[REST API Crash Course Caleb Curry?](https://www.youtube.com/watch?v=qbLc5a9jdXo)**
 
 ---
 
