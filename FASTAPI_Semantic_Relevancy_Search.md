@@ -3,7 +3,7 @@
 
 ---
 
-## What is an API, and why are they “REST-ing”?
+## What aare APIs, and why are they “REST-ing”?
 
 An **Application Programming Interface (API)** is a set of rules that allows different pieces of software to communicate with each other. For example, if we have one application written in Python and another written in JavaScript, an API allows those two programs to communicate.
 
