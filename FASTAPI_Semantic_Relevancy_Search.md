@@ -34,7 +34,7 @@ Many companies and individuals build APIs specifically so others can create tool
 
 - **[Yahoo Finance API](https://rapidapi.com/apidojo/api/yahoo-finance1)** – Market and financial data  
 - **[Words API](https://www.wordsapi.com/)** – Definitions, synonyms, word relationships  
-- **[OpenAI API](https://openai.com/api/)** – We are approaching the singularity. 
+- **[OpenAI API](https://openai.com/api/)** – We are approaching the singularity
 
 ---
 
