@@ -11,7 +11,7 @@ A **REST API** is an API that follows a stricter set of conventions. REST stands
 
 I’ll leave you to figure out GET, POST, and DELETE, but will lend you a helpful tip on PUT: 
 > You are PUT-ing like a POST, but instead of POST-ing, you are re-PUT-ing information in place of which you are POST-ing or double PUT-ing.
-> On second thought, I’ll let you piece things together: [Link text](https://stackoverflow.com/questions/630453/what-is-the-difference-between-post-and-put-in-http)
+> On second thought, I’ll let you piece things together: [What is the difference between POST and PUT in HTTP?](https://stackoverflow.com/questions/630453/what-is-the-difference-between-post-and-put-in-http)
 
 **What is the difference between POST and PUT in HTTP?**
 
