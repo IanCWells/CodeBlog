@@ -10,8 +10,9 @@ An **Application Programming Interface (API)** is a set of rules that allows dif
 A **REST API** is an API that follows a stricter set of conventions. REST stands for **Representational State Transfer** and refers to a subset of APIs that expose predictable URLs and use standard HTTP methods—`GET`, `POST`, `PUT`, and `DELETE`—to interact with resources.
 
 I’ll leave you to figure out GET, POST, and DELETE, but will lend you a helpful tip on PUT: 
-> You are PUT-ing like a POST, but instead of POST-ing, you are re-PUT-ing information in place of which you are POST-ing or double PUT-ing.On second thought, I’ll let you piece things together
-> **What is the difference between POST and PUT in HTTP?**
+> You are PUT-ing like a POST, but instead of POST-ing, you are re-PUT-ing information in place of which you are POST-ing or double PUT-ing.
+> On second thought, I’ll let you piece things together
+**What is the difference between POST and PUT in HTTP?**
 
 ---
 
