@@ -1,4 +1,4 @@
-## Inspired From - **[REST API Crash Course Caleb Curry?](https://www.youtube.com/watch?v=qbLc5a9jdXo)**
+## Inspired From - **[REST API Crash Course Caleb Curry](https://www.youtube.com/watch?v=qbLc5a9jdXo)**
 
 ---
 
@@ -20,7 +20,7 @@ I’ll leave you to figure out GET, POST, and DELETE, but will lend you a helpfu
 Let’s say we have a webserver with a bunch of data. 
 If we didn’t use a REST API, we would be hosting our private data on a webserver directly (exposed via direct inspection of HTML).  Using an API exposes only the endpoints we want our users to interact with. 
 
-### 2. Separation of Powers (front end vs back end)
+### 2. [Separation of Powers](https://en.wikipedia.org/wiki/Separation_of_powers) (front end vs back end)
 REST APIs allow front-end and back-end systems to be developed independently. 
 
 ### 3. Reusability
@@ -32,9 +32,9 @@ A single REST API can be reused across multiple clients (web apps, mobile apps, 
 
 Many companies and individuals build APIs specifically so others can create tools and applications on top of them.
 
-- **Yahoo Finance API** – Market and financial data  
-- **Words API** – Definitions, synonyms, word relationships  
-- **OpenAI API** – We are approaching the singularity. 
+- **[Yahoo Finance API](https://rapidapi.com/apidojo/api/yahoo-finance1)** – Market and financial data  
+- **[Words API](https://www.wordsapi.com/)** – Definitions, synonyms, word relationships  
+- **[OpenAI API](https://openai.com/api/)** – We are approaching the singularity. 
 
 ---
 
