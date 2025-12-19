@@ -31,6 +31,6 @@ Let’s design a search tool to change that.
 - **Relevance Algorithm:** based on the provided application description, we design an algorithm to output the top K most relevant URLs to our input query  
 - **An API:** to allow communication between an end user and our backend (making it easy for a web dev team to implement the search tool, [*winking face emoji*] in case you want to implement this @FUTEK_Web_Team).
 
+<p align="center">
   <img width="440" height="337" alt="image" src="https://github.com/user-attachments/assets/48fc9585-c50c-4c4c-8ae8-1ba424dcd124" />
-
-
+</p>
