@@ -61,6 +61,10 @@ If we do the same for **“Try Harder”** and compare these vectors mathematica
 
 By the way, **you are good enough**.  
 
+### The Code
+
+**First, let's embed the application titles.**
+
 ```python
 from sentence_transformers import SentenceTransformer
 import json
@@ -97,6 +101,33 @@ with open("futek_title_embeddings.json", "w", encoding="utf-8") as f:
     json.dump(results_with_embeddings, f, indent=2)
 ```
 
+**Semantic Comparison**
+
+```python
+def match_application(application_title: str, top_k: int = 5):
+    records = app.state.embedding_records
+    embeddings = app.state.embeddings    
+
+    top_k = min(top_k, len(records))
+
+    query_embedding = model.encode(
+        application_title,
+        normalize_embeddings=True
+    )
+
+    scores = embeddings @ query_embedding
+    top_idx = scores.argsort()[-top_k:][::-1]
+
+    results = []
+    for i in top_idx:
+        results.append({
+            "matched_title": records[i]["title"],
+            "url": records[i].get("url"),
+            "score": float(scores[i])
+        })
+
+    return results
+```
 
 ---
 
