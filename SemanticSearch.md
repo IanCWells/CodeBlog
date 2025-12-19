@@ -29,4 +29,4 @@ Let’s design a search tool to change that.
 - **Customer input:** a short description of their application (ie: Laparoscopic Gripper, Robotics, Space Rated Load Cells, etc…)  
 - **Application page data:** the 250+ application titles, notes, and URLs stored in JSON  
 - **Relevance Algorithm:** based on the provided application description, we design an algorithm to output the top K most relevant URLs to our input query  
-- **An API:** to allow communication between an end user and our backend (making it easy for a web dev team to implement the search tool, *winking face emoji* in case you want to implement this @FUTEK_Web_Team).  
+- **An API:** to allow communication between an end user and our backend (making it easy for a web dev team to implement the search tool, ***winking face emoji*** in case you want to implement this @FUTEK_Web_Team).  
