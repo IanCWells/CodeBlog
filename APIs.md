@@ -1,4 +1,5 @@
 ## APIs
+**12/19/2025, Written By Ian Wells**
 Inspired by - **[REST API Crash Course Caleb Curry](https://www.youtube.com/watch?v=qbLc5a9jdXo)**
 
 ---
@@ -40,4 +41,4 @@ Many companies and individuals build APIs specifically so others can create tool
 ---
 
 ## The Project and the Practical
-(Coming soon.)
+[Semantic Search]()
