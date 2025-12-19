@@ -65,13 +65,17 @@ By the way, **you are good enough**.
 from sentence_transformers import SentenceTransformer
 import json
 
+#Load Our Embedding Model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
+#Load our website application data
 with open("results.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
+#Grab the titles from each website application card
 titles = [item["title"] for item in data]
 
+#Embed all titles, and normalize each vector
 title_embeddings = model.encode(
     titles,
     normalize_embeddings=True,
@@ -80,6 +84,7 @@ title_embeddings = model.encode(
 
 results_with_embeddings = []
 
+#Loop through all the data and embeddings, zip them up and append to results
 for item, emb in zip(data, title_embeddings):
     results_with_embeddings.append({
         "title": item["title"],
@@ -87,8 +92,10 @@ for item, emb in zip(data, title_embeddings):
         "embedding": emb.tolist()  # convert numpy → JSON-safe
     })
 
+#Dump to JSON
 with open("futek_title_embeddings.json", "w", encoding="utf-8") as f:
     json.dump(results_with_embeddings, f, indent=2)
+```
 
 
 ---
