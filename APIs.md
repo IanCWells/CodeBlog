@@ -40,5 +40,4 @@ Many companies and individuals build APIs specifically so others can create tool
 
 ---
 
-## A project and practical use case (with vector embeddings!)
-[Semantic Search](./SemanticSearch)
+## [A project and practical use case (with vector embeddings!)](./SemanticSearch)
