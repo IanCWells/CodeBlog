@@ -4,7 +4,7 @@
 
 This project uses APIs and semantic relevancy to connect an engineer’s application description to relevant website URLs.
 
-**VISUAL GIF**
+![Semantic Relevancy](https://github.com/user-attachments/assets/32286f80-94b8-4cc1-849e-4939face4365)
 
 ---
 
