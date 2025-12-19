@@ -38,10 +38,10 @@ Let’s design a search tool to change that.
 ## Semantic Search
 
 **How does this make you feel?**  
-You are not good enough.  
+*You are not good enough.*  
 
 **And this, how do you feel after reading this?**  
-Try harder.  
+*Try harder.* 
 
 Both phrases make me feel inadequate, with the silver lining being that each phrase is **semantically similar**.  
 
@@ -60,6 +60,36 @@ If we do the same for **“Try Harder”** and compare these vectors mathematica
 4. **Sort these comparisons by score**, output the top results to see the best matches.  
 
 By the way, **you are good enough**.  
+
+```python
+from sentence_transformers import SentenceTransformer
+import json
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+with open("results.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+titles = [item["title"] for item in data]
+
+title_embeddings = model.encode(
+    titles,
+    normalize_embeddings=True,
+    show_progress_bar=True
+)
+
+results_with_embeddings = []
+
+for item, emb in zip(data, title_embeddings):
+    results_with_embeddings.append({
+        "title": item["title"],
+        "url": item["url"],
+        "embedding": emb.tolist()  # convert numpy → JSON-safe
+    })
+
+with open("futek_title_embeddings.json", "w", encoding="utf-8") as f:
+    json.dump(results_with_embeddings, f, indent=2)
+
 
 ---
 
