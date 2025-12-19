@@ -1,8 +1,6 @@
 # Sensors, Semantic Relevancy, and APIs
 
-**12/19/2025**
-
-**Written By Ian Wells**
+**12/19/2025, Written By Ian Wells**
 
 This project uses APIs and semantic relevancy to connect an engineer’s application description to relevant website URLs.
 
@@ -36,3 +34,47 @@ Let’s design a search tool to change that.
 <p align="center">
   <img width="440" height="337" alt="image" src="https://github.com/user-attachments/assets/48fc9585-c50c-4c4c-8ae8-1ba424dcd124" />
 </p>
+
+## Semantic Search
+
+**How does this make you feel?**  
+You are not good enough.  
+
+**And this, how do you feel after reading this?**  
+Try harder.  
+
+If you’re anything like me, you probably aren’t feeling great. Both phrases make me feel inadequate, with the silver lining being that each phrase is **semantically similar**.  
+
+A pretrained embedding model expresses its feelings in **vectors**. Specifically, passing the string **“You are not good enough.”** through an embedding model will output a **multi-dimensional vector** (fancy for a really long list of numbers).  
+
+If we do the same for **“Try Harder”** and compare these vectors mathematically, we can assign relevancy or **“how close”** the phrases are in meaning.  
+
+---
+
+### Design of Semantic Algorithm
+
+1. **Use an embedding model** (pretrained language model) to store a semantic vector for each application title that FUTEK has on their website.  
+2. **During the application run**, have a user input text and embed this as a query vector.  
+3. **Looping through all application vectors** (O(N) time complexity), perform a cosine similarity between query and application vectors, store the comparisons as scores.  
+   - **Cosine similarity – Wikipedia**, in our case, is the dot product of two embeddings, under the assumption each vector is normalized (unit length has a magnitude of 1).  
+4. **Sort these comparisons by score**, output the top results to see the best matches.  
+
+By the way, **you are good enough**.  
+
+---
+
+**IMAGES w/ Comments**
+
+---
+
+## API Design
+
+We are using **FASTApi** to design a connection between our text input and backend semantic search.
+
+**IMAGES w/ Comments on the Code**
+
+---
+
+Thanks for reading 😊  
+
+If you’d like to learn more or design your own semantic search tool, take a look at the repo for this project. 
