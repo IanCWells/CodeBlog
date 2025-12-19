@@ -19,7 +19,9 @@ FUTEK manufactures load cells, torque sensors, and pressure sensors to enable pr
 
 There are hundreds of sensing applications. Engineers can use sensors for test and measurement, quality control, force feedback, automation, robotics….the list goes on.  
 
-To lend perspective on what Is possible, FUTEK provides ~250 application landing pages. From an SEO perspective, these are accessible via Google, Safari, even Bing. On FUTEK’s website however, navigating through ~250 applications is not possible through internal search (planned for future development). Let’s design a search tool to change that.
+To lend perspective on what Is possible, FUTEK provides ~250 [application landing pages](https://www.futek.com/applications). From an SEO perspective, these are accessible via Google, Safari, even Bing. On FUTEK’s website however, navigating through hundreds of applications is not possible via the current internal search (planned for future development). 
+
+Let’s design a search tool to change that.
 
 ---
 
