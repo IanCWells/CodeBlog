@@ -61,9 +61,9 @@ If we do the same for **“Try Harder”** and compare these vectors mathematica
 
 By the way, **you are good enough**.  
 
-### The Code
+### The Code, Comments Heavy
 
-**First, let's embed the application titles.**
+**Embed the application titles.**
 
 ```python
 from sentence_transformers import SentenceTransformer
@@ -128,11 +128,6 @@ def match_application(application_title: str, top_k: int = 5):
 
     return results
 ```
-
----
-
-**IMAGES w/ Comments**
-
 ---
 
 ## API Design
