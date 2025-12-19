@@ -53,7 +53,7 @@ If we do the same for **“Try Harder”** and compare these vectors mathematica
 
 ### Design of Semantic Algorithm
 
-1. **Use an embedding model** (pretrained language model) to store a semantic vector for each application title that FUTEK has on their website.  
+1. **Use an embedding model** (pretrained language model) to store a semantic vector for each application title that FUTEK has on their website.  We are using all-MiniLM-L6-v2 from Sentence Transformers, a lightweight and free to download model. 
 2. **During the application run**, have a user input text and embed this as a query vector.  
 3. **Looping through all application vectors** (O(N) time complexity), perform a cosine similarity between query and application vectors, store the comparisons as scores.  
    - **Cosine similarity – Wikipedia**, in our case, is the dot product of two embeddings, under the assumption each vector is normalized (unit length has a magnitude of 1).  
@@ -101,7 +101,7 @@ with open("futek_title_embeddings.json", "w", encoding="utf-8") as f:
     json.dump(results_with_embeddings, f, indent=2)
 ```
 
-**Semantic Comparison**
+**Semantic Comparison Algorithm**
 
 ```python
 def match_application(application_title: str, top_k: int = 5):
