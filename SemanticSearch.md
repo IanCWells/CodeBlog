@@ -2,7 +2,7 @@
 
 **12/19/2025**
 
-In this project, we combine APIs and semantic relevancy to create a search tool which connects an engineer’s application intention to relevant website URLs.  
+This project uses APIs and semantic relevancy to connect an engineer’s application description to relevant website URLs.
 
 **VISUAL GIF**
 
@@ -15,7 +15,7 @@ In this project, we combine APIs and semantic relevancy to create a search tool 
 ---
 
 ## Background
-FUTEK manufactures load cells, torque sensors, and pressure sensors to enable precision measurement through configuration of **Strain gauge - Wikipedia’s**.  
+FUTEK manufactures load cells, torque sensors, and pressure sensors to enable precision measurement through configuration of [Strain Gauge's](https://en.wikipedia.org/wiki/Strain_gauge).
 
 There are hundreds of sensing applications. Engineers can use sensors for test and measurement, quality control, force feedback, automation, robotics….the list goes on.  
 
