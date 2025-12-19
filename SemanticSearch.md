@@ -43,7 +43,7 @@ You are not good enough.
 **And this, how do you feel after reading this?**  
 Try harder.  
 
-If you’re anything like me, you probably aren’t feeling great. Both phrases make me feel inadequate, with the silver lining being that each phrase is **semantically similar**.  
+Both phrases make me feel inadequate, with the silver lining being that each phrase is **semantically similar**.  
 
 A pretrained embedding model expresses its feelings in **vectors**. Specifically, passing the string **“You are not good enough.”** through an embedding model will output a **multi-dimensional vector** (fancy for a really long list of numbers).  
 
