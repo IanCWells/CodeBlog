@@ -1,6 +1,7 @@
 # Sensors, Semantic Relevancy, and APIs
 
 **12/19/2025**
+**Ian Wells**
 
 This project uses APIs and semantic relevancy to connect an engineer’s application description to relevant website URLs.
 
