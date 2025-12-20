@@ -7,3 +7,4 @@ This project began December 18th, 2025 :)
 
 ### Links
 - [APIs](./APIs)
+- [Semantic Search](./SemanticSearch)
