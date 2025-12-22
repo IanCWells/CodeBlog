@@ -4,7 +4,7 @@
 
 This project uses APIs and semantic relevancy to connect an engineer’s application description to relevant website URLs from [FUTEK.com](https://www.futek.com/home)
 
-![Semantic Relevancy](CodeBlog/assets/SemanticDemo.gif)
+![Semantic Relevancy](assets/SemanticDemo.gif)
 
 ---
 
@@ -31,7 +31,7 @@ Let’s design a search tool to change that.
 - **Relevance Algorithm:** based on the provided application description, we design an algorithm to output the top K most relevant URLs to our input query  
 - **An API:** to allow communication between an end user and our backend (making it easy for a web dev team to implement the search tool, [*winking face emoji*] in case you want to implement this @FUTEK_Web_Team).
 
-![System Design](CodeBlog/assets/SemanticFlow.png)
+![System Design](assets/SemanticFlow.png)
 
 ## Semantic Search
 
