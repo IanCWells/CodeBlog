@@ -56,7 +56,7 @@ If we do the same for **“Try Harder”** and compare these vectors mathematica
 1. **Use an embedding model** (pretrained language model) to store a semantic vector for each application title that FUTEK has on their website.  We are using all-MiniLM-L6-v2 from Sentence Transformers, a lightweight and free to download model. 
 2. **During the application run**, have a user input text and embed this as a query vector.  
 3. **Looping through all application vectors** (O(N) time complexity), perform a cosine similarity between query and application vectors, store the comparisons as scores.  
-   - **Cosine similarity – Wikipedia**, in our case, is the dot product of two embeddings, under the assumption each vector is normalized (unit length has a magnitude of 1).  
+   - **[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)**, in our case, is the dot product of two embeddings, under the assumption each vector is normalized (unit length has a magnitude of 1).  
 4. **Sort these comparisons by score**, output the top results to see the best matches.  
 
 By the way, **you are good enough**.  
