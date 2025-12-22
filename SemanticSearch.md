@@ -183,6 +183,7 @@ def post_app_description(request: TextRequest):
     result = match_application(user_text)
     return result
 
+```
 ---
 
 Thanks for reading 😊  
