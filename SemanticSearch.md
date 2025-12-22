@@ -104,24 +104,34 @@ with open("futek_title_embeddings.json", "w", encoding="utf-8") as f:
 **Semantic Comparison Algorithm**
 
 ```python
+#Takes a string describing an application, outputs list of order k matches
 def match_application(application_title: str, top_k: int = 5):
+    #Readable Metadata
     records = app.state.embedding_records
+    #Vector Embeddings
     embeddings = app.state.embeddings    
 
+    #If top k is larger than the number of records, cap so we don't index beyond array and cause memory fault
     top_k = min(top_k, len(records))
 
+    #Convert the application title into a vector and normalize (unit magnitude of 1)
     query_embedding = model.encode(
         application_title,
         normalize_embeddings=True
     )
 
+    #Dot product of query and embeddings, [N, D] * [D] = [N] sized array
     scores = embeddings @ query_embedding
+
+    #argsort() sorts indices by lowest to highest value, [-top_k:] is back of the array, [::-1] flips the array so highest is first
     top_idx = scores.argsort()[-top_k:][::-1]
 
+    #Grabs the human readable data from the records using the indices, stores as a list of dictionaries 
     results = []
     for i in top_idx:
         results.append({
             "matched_title": records[i]["title"],
+            #Fun fact: .get("url") functions same as ["url"], but returns None if URL is missing
             "url": records[i].get("url"),
             "score": float(scores[i])
         })
@@ -133,6 +143,13 @@ def match_application(application_title: str, top_k: int = 5):
 ## API Design
 
 We are using **FASTApi** to design a connection between our text input and backend semantic search.
+
+**Imports**
+
+```python
+from fastapi import FastAPI
+app = FastAPI()
+```
 
 **IMAGES w/ Comments on the Code**
 
