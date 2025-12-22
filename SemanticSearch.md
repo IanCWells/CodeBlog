@@ -164,10 +164,17 @@ class TextRequest(BaseModel):
 #loads the vectors and titles from our database upon startup, converts the embeddings to a NumPY matrix
 @app.on_event("startup")
 def load_embeddings():
+    #app.state is FasTAPIs official place to store shared, long-lived application data
     app.state.embedding_records = load_json("futek_title_embeddings.json")
     app.state.embeddings = np.array(
         [r["embedding"] for r in app.state.embedding_records]
     )
+
+#Side note on app state:
+#Data that takes time to load can be stored in app.state upon start up.  In reality, this data lives on your server's RAM
+#So if you exceed RAM, that is where problems will occur
+#One common nuance/mistake to look our for is in uvicorn main:app --workers 4
+#here we have 4 workers, so the API can be called at the same time up to x4 (they are just like CPU cores)
 
 #Sending an application description
 @app.post("/application_description")
