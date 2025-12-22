@@ -186,4 +186,4 @@ def post_app_description(request: TextRequest):
 
 Thanks for reading 😊  
 
-If you’d like to learn more or design your own semantic search tool, take a look at the repo for this project. 
+If you’d like to learn more or design your own semantic search tool, take a look at the **[repo](https://github.com/IanCWells/SemanticRelevancy)** for this project. 
