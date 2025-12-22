@@ -171,7 +171,7 @@ def load_embeddings():
 #Side note on app state:
 #Data that takes time to load can be stored in app.state upon start up.  In reality, this data lives on your server's RAM
 #So if you exceed RAM, that is where problems will occur
-#One common nuance/mistake to look our for is in uvicorn main:app --workers 4
+#One common nuance/mistake to look for is in uvicorn main:app --workers 4
 #here we have 4 workers, so the API can be called at the same time up to x4 (they are just like CPU cores)
 
 #Sending an application description
