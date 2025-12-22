@@ -144,14 +144,37 @@ def match_application(application_title: str, top_k: int = 5):
 
 We are using **FASTApi** to design a connection between our text input and backend semantic search.
 
-**Imports**
-
 ```python
+#FastAPI handles HTTP routing, Request parsing, JSON serialization, etc..
 from fastapi import FastAPI
 app = FastAPI()
-```
 
-**IMAGES w/ Comments on the Code**
+#Pydantic will help us enforce types by returning helpful errors
+from pydantic import BaseModel
+
+#Production grade health check. Simply checks if the server is up and responding. 
+@app.get("/")
+def health():
+    return {"status": "ok"}
+
+#defines the expected text, using pydantic
+class TextRequest(BaseModel):
+    text: str
+
+#loads the vectors and titles from our database upon startup, converts the embeddings to a NumPY matrix
+@app.on_event("startup")
+def load_embeddings():
+    app.state.embedding_records = load_json("futek_title_embeddings.json")
+    app.state.embeddings = np.array(
+        [r["embedding"] for r in app.state.embedding_records]
+    )
+
+#Sending an application description
+@app.post("/application_description")
+def post_app_description(request: TextRequest):
+    user_text = request.text
+    result = match_application(user_text)
+    return result
 
 ---
 
